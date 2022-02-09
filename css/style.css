@@ -1,0 +1,220 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: Helvetica, Arial, sans-serif;
+  background-color: #ebded4;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  border-radius: 4px;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 3.125rem;
+  color: #9b261d;
+  font-family: "Courier New", Courier, monospace;
+  margin: 0px;
+  position: relative;
+}
+
+h1::before {
+  position: absolute;
+  content: "";
+  background-image: url(/imgs/heart1.png);
+  width: 600px;
+  height: 600px;
+  top: 0px;
+  right: 300px;
+  z-index: -1;
+}
+
+h3 {
+  font-family: "Courier New", Courier, monospace;
+  color: #c07d7e;
+}
+
+p {
+  font-size: 1.2rem;
+  color: #2c2b31;
+}
+
+.menu ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  font-size: 1.125rem;
+  margin: 1.5rem 6rem;
+  justify-content: center;
+}
+
+.menu ul a {
+  color: #9b261d;
+  transition: 0.3s;
+}
+
+.menu ul a:hover {
+  border-bottom: #c07d7e solid;
+}
+
+.introduction {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 2rem 12rem;
+}
+
+.introduction-text {
+  display: grid;
+  text-align: right;
+  align-content: center;
+  justify-items: end;
+}
+
+.introduction-text a {
+  background: #9b261d;
+  padding: 1rem;
+  color: white;
+  transition: 0.3s;
+}
+
+.introduction-text a:hover {
+  background-color: #c07d7e;
+}
+
+.introduction-imgs {
+  height: 370px;
+  overflow-y: scroll;
+  grid-column: 2;
+}
+
+.introduction-imgs::-webkit-scrollbar {
+  width: 15px;
+}
+
+.introduction-imgs::-webkit-scrollbar-thumb {
+  background: #af4136;
+  border-radius: 4px;
+}
+
+.introduction-imgs::-webkit-scrollbar-track {
+  background: #faf6ed;
+  border-radius: 4px;
+}
+
+.learn-background {
+  background-color: #f5ece6;
+}
+
+.learn {
+  margin: 0rem 12rem;
+  text-align: center;
+  gap: 1.5rem;
+  padding-bottom: 4rem;
+  padding-top: 2rem;
+}
+
+.learn a {
+  background: #9b261d;
+  padding: 1rem;
+  color: white;
+  transition: 0.3s;
+}
+
+.learn a:hover {
+  background: #c07d7e;
+}
+
+.learn p {
+  margin: 2rem;
+}
+
+.learn h2 {
+  font-size: 2rem;
+  color: #c07d7e;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.learn-imgs {
+  display: flex;
+  justify-content: center;
+  max-width: 100%;
+}
+
+.contact {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 2rem 12rem;
+}
+
+.contact input,
+label,
+textarea {
+  display: block;
+}
+
+label,
+.send {
+  margin: 10px 0px;
+}
+
+input,
+textarea {
+  padding: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+}
+
+.contact-infos {
+  text-align: right;
+  align-self: end;
+  position: relative;
+}
+
+.contact.infos::before {
+  position: absolute;
+  content: "";
+  background-image: url(/imgs/heart1.png);
+  width: 600px;
+  height: 600px;
+  bottom: 40px;
+}
+
+.contact-infos a {
+  color: #9b261d;
+}
+
+@media (max-width: 750px) {
+  .introduction h1,
+  p {
+    text-align: center;
+  }
+  .introduction a {
+    justify-self: center;
+  }
+  .introduction,
+  .contact {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .introduction,
+  .contact,
+  .learn {
+    margin: 1rem 2rem;
+  }
+  .contact ul {
+    text-align: center;
+  }
+  nav {
+    display: none;
+  }
+}
